@@ -11,8 +11,8 @@ class Math {
 
 class Child {
     public:
-    int calculate(int operation) {
-        return operation;
+    Math learnMath(Math math) {
+        return math;
     }
 };
 
@@ -21,7 +21,7 @@ int main()
 {
     Child child;
     Math math;
-    int op = child.calculate(math.add(5,4));
-    cout << op;
+    Math childMath = child.learnMath(math);
+    cout << childMath.add(3,5);
     return 0;
 }
