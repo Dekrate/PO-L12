@@ -23,38 +23,6 @@ public class mp3Player {
         this.supportedFormats = supportedFormats;
     }
 
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getProducer() {
-        return producer;
-    }
-
-    public void setProducer(String producer) {
-        this.producer = producer;
-    }
-
-    public int getStorage() {
-        return storage;
-    }
-
-    public void setStorage(int storage) {
-        this.storage = storage;
-    }
-
-    public ArrayList<String> getSupportedFormats() {
-        return supportedFormats;
-    }
-
-    public void setSupportedFormats(ArrayList<String> supportedFormats) {
-        this.supportedFormats = supportedFormats;
-    }
-
     @Override
     public String toString() {
         String result = "mp3Player{" +
