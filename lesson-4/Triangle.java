@@ -25,4 +25,9 @@ public class Triangle implements Figure {
     public BigDecimal calculatePerimeter() {
         return a.add(b).add(c);
     }
+
+    @Override
+    public Figure scale() {
+        return new Triangle(a.multiply(BigDecimal.TWO), b.multiply(BigDecimal.TWO), c.multiply(BigDecimal.TWO), h.multiply(BigDecimal.TWO), isRectangular);
+    }
 }
