@@ -19,8 +19,13 @@ public class Rectangle implements Figure {
         return a.multiply(BigDecimal.TWO).add(b.multiply(BigDecimal.TWO));
     }
 
-    // provide example of immutability
-    public Rectangle duplicateAndCreateNewRectangle() {
+
+    /**
+     * @return scaled figure
+     * It's ane example of immutability of classes in OOP.
+     */
+    @Override
+    public Figure scale() {
         return new Rectangle(a.multiply(BigDecimal.TWO), b.multiply(BigDecimal.TWO));
     }
 }
