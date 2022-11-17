@@ -4,4 +4,6 @@ public interface Figure {
     BigDecimal calculateArea();
 
     BigDecimal calculatePerimeter();
+    
+    Figure scale();
 }
