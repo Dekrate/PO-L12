@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Euro implements Currency {
     private final float value;
 
@@ -9,18 +11,23 @@ public class Euro implements Currency {
     public Currency addedCurrency(float value, String currency) {
         FakeCantor fakeCantor = new FakeCantor();
         float v = fakeCantor.euroToRate(currency);
-        return new Euro(this.value + value*v);
+        return new Euro(this.value + value/v);
     }
 
     @Override
-    public Currency subtractedCurrency(float value, String currency) throws ArithmeticException {
+    public Currency subtractedCurrency(float value, String currency) {
         FakeCantor fakeCantor = new FakeCantor();
         float v = fakeCantor.euroToRate(currency);
-        float result = this.value - v*value;
-        if (result > 0) {
-            return new Euro(result);
-        } else {
-            throw new ArithmeticException("How dare you get indebted?");
+        float result = this.value - value/v;
+        try {
+            if (result > 0) {
+                return new Euro(result);
+            } else {
+                throw new ArithmeticException("How dare you get in-debted?"){{}};
+            }
+        } catch (ArithmeticException e) {
+            System.err.println(e.getMessage());
+            return this;
         }
     }
 
