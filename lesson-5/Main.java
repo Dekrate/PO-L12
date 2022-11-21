@@ -11,6 +11,6 @@ public class Main {
         Currency usd1 = euro.subtractedCurrency(1.00F, "USD");
         System.out.println("Euro when subtracted 1.00 USD: " + usd1.balance());
         Currency eur3 = euro.subtractedCurrency(10.00F, "USD");
-        System.out.println("Euro when subtracted 10.00 USD from 2.45 EUR: " + eur3 + "EUR");
+        System.out.println("Euro when subtracted 10.00 USD from 2.45 EUR: " + eur3.balance() + "EUR");
     }
 }
